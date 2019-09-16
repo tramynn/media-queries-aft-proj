@@ -24,6 +24,7 @@ class NavBar extends Component {
             </ul>
           </div>
         </nav>
+        <div className=""></div>
       </>
     );
   }

@@ -4,9 +4,11 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="App">
+      <div className="overlay"></div>
+      <div className="header-img"></div>
       <NavBar />
-    </>
+    </div>
   );
 }
 
