@@ -3,6 +3,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 12vh;
+  width: 100vw;
   position: absolute;
   top: 0;
   z-index: 4;
@@ -20,7 +21,7 @@ ul {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  width: 26vw;
+  width: 30vw;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -33,3 +34,5 @@ li:hover {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: ) {
+}
