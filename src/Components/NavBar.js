@@ -9,7 +9,20 @@ class NavBar extends Component {
     };
   }
 
-  toggle = () => {};
+  toggle = () => {
+    if (
+      this.state.menuOpenStatus === "dropdown-menu-close" ||
+      this.state.menuOpenStatus === "dropdown-menu"
+    ) {
+      this.setState({
+        menuOpenStatus: "dropdown-menu-open"
+      });
+    } else if (this.state.menuOpenStatus === "dropdown-menu-open") {
+      this.setState({
+        menuOpenStatus: "dropdown-menu-close"
+      });
+    }
+  };
 
   render() {
     return (
