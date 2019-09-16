@@ -20,7 +20,8 @@ h1 {
 }
 
 ul,
-button {
+button,
+.dropdown-style {
   color: white;
   display: flex;
   justify-content: space-around;
@@ -30,9 +31,11 @@ button {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 0.08em;
 }
 
-li:hover {
+li:hover,
+h2:hover {
   color: #fec503;
   cursor: pointer;
 }
@@ -57,26 +60,49 @@ img {
   filter: invert(1);
 }
 
-div.dropdown-menu {
+.dropdown-style {
+  height: 30vh;
+  flex-direction: column;
+}
+
+div.dropdown-menu,
+.dropdown-menu-open,
+.dropdown-menu-close {
   width: 89vw;
   height: 30vh;
   background-color: #1b1e22;
-  position: absolute;
+  position: fixed;
   top: 8vh;
   padding-left: 11vw;
   z-index: 3;
+  transform: translateY(-300px);
 }
 
-.dropdown-style {
-  display: flex;
-  height: 30vh;
-  justify-content: space-around;
-  flex-direction: column;
-  color: white;
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: bold;
+.dropdown-menu-open {
+  animation-name: open;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.dropdown-menu-close {
+  animation: close 0.6s forwards linear;
+}
+
+/* KEY FRAMES */
+@keyframes open {
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes close {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-300px);
+  }
 }
 
 /* MEDIA QUERIES */
