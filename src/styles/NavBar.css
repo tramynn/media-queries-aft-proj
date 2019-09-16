@@ -1,3 +1,7 @@
+.hidden-by-default {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -34,11 +38,11 @@ li:hover {
 }
 
 button {
-  display: none;
+  display: flex;
   justify-content: space-around;
-  width: 90px;
-  height: 50px;
   align-items: center;
+  width: 90px;
+  height: 45px;
   border-radius: 5px;
   background-color: #fed136;
   border: none;
@@ -53,10 +57,40 @@ img {
   filter: invert(1);
 }
 
+div.dropdown-menu {
+  width: 89vw;
+  height: 30vh;
+  background-color: #1b1e22;
+  position: absolute;
+  top: 8vh;
+  padding-left: 11vw;
+  z-index: 3;
+}
+
+.dropdown-style {
+  display: flex;
+  height: 30vh;
+  justify-content: space-around;
+  flex-direction: column;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1110px) {
   nav {
     background-color: #1b1e22;
     height: 8vh;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
   }
 }

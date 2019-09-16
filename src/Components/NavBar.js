@@ -4,8 +4,12 @@ import "../styles/NavBar.css";
 class NavBar extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      menuOpenStatus: "dropdown-menu"
+    };
   }
+
+  toggle = () => {};
 
   render() {
     return (
@@ -16,13 +20,13 @@ class NavBar extends Component {
           </div>
           <div>
             <ul>
-              <li>Services</li>
-              <li>Portfolio</li>
-              <li>About</li>
-              <li>Team</li>
-              <li>Contact</li>
-              <li>
-                <button>
+              <li className="nav-links">Services</li>
+              <li className="nav-links">Portfolio</li>
+              <li className="nav-links">About</li>
+              <li className="nav-links">Team</li>
+              <li className="nav-links">Contact</li>
+              <li className="menu-button hidden-by-default">
+                <button onClick={this.toggle}>
                   MENU
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
@@ -32,8 +36,16 @@ class NavBar extends Component {
               </li>
             </ul>
           </div>
+          <div className={`${this.state.menuOpenStatus}`}>
+            <div className="dropdown-style">
+              <h2>Services</h2>
+              <h2>Portfolio</h2>
+              <h2>About</h2>
+              <h2>Team</h2>
+              <h2>Contact</h2>
+            </div>
+          </div>
         </nav>
-        <div className=""></div>
       </>
     );
   }
