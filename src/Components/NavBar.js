@@ -21,6 +21,15 @@ class NavBar extends Component {
               <li>About</li>
               <li>Team</li>
               <li>Contact</li>
+              <li>
+                <button>
+                  MENU
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+                    alt="hamburger"
+                  ></img>
+                </button>
+              </li>
             </ul>
           </div>
         </nav>
