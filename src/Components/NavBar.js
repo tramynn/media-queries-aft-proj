@@ -49,16 +49,16 @@ class NavBar extends Component {
               </li>
             </ul>
           </div>
-          <div className={`${this.state.menuOpenStatus}`}>
-            <div className="dropdown-style">
-              <h2>Services</h2>
-              <h2>Portfolio</h2>
-              <h2>About</h2>
-              <h2>Team</h2>
-              <h2>Contact</h2>
-            </div>
-          </div>
         </nav>
+        <div className={`${this.state.menuOpenStatus}`}>
+          <div className="dropdown-style">
+            <h2>Services</h2>
+            <h2>Portfolio</h2>
+            <h2>About</h2>
+            <h2>Team</h2>
+            <h2>Contact</h2>
+          </div>
+        </div>
       </>
     );
   }
